@@ -67,7 +67,7 @@ app.use((error, req, res, next) => {
   });
 });
 
-if(process.env.NODE_ENV || environment ==="production"){
+if(process.env.NODE_ENV === "development"){
   app.use(express.static('client/build'));
   console.log("he");
 }
