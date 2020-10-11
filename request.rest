@@ -1,0 +1,7 @@
+POST http://localhost:6800/api/users/signup
+
+{
+  name:"Mgmg",
+  email:"mgmg@gmail.com",
+  password:"b123",
+}
