@@ -10,6 +10,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(morgan('dev'));
 
+app.use(express.static('client/build'));
 app.use('/uploads/', express.static('uploads'));
 
 const PORT = process.env.PORT || 6800;
@@ -68,7 +69,6 @@ app.use((error, req, res, next) => {
 });
 
 if(process.env.NODE_ENV === "development"){
-  app.use(express.static('client/build'));
   console.log("he");
 }
 app.listen(PORT, () => {
