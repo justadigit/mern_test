@@ -70,6 +70,7 @@ app.use((error, req, res, next) => {
 
 if(process.env.NODE_ENV || environment ==="production"){
   app.use(express.static('client/build'));
+  console.log("he");
 }
 app.listen(PORT, () => {
   console.log(`Your Server is runningat ${PORT}`);
